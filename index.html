@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GORILLAZ</title>
+<link rel="icon" href="favicon.png">
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family:cursive;
+        background: linear-gradient(to bottom, #0a0a1a, #1a1a2a);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .portada {
+        position: relative;
+        width: 90%;
+        max-width: 900px;
+        padding: 40px;
+        border: 5px solid #ff1100;
+        border-radius: 20px;
+        background: rgba(0,0,0,0.7);
+        text-align: center;
+        box-shadow: 0 0 20px #00CCFF, 0 0 40px #00ccff inset;
+        animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+        0% { box-shadow: 0 0 20px #00ccff, 0 0 40px #00ccff inset; }
+        100% { box-shadow: 0 0 40px #00ccFF, 0 0 60px #00ccff inset; }
+    }
+    .botones {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.boton-arcade {
+    background: #33ffcc;
+    color: #0a0a1a;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7em;
+    padding: 15px 25px;
+    border: 4px solid #005000;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+    text-shadow: 2px 2px #000;
+}
+
+.boton-arcade:hover {
+    background: #3336ff;
+    color: #fff;
+    box-shadow: 0 0 20px #33ff3d, 0 0 40px #33ffcc inset;
+    transform: scale(1.05);
+}
+
+
+    h1 {
+        font-family: 'Gorillaz1';
+        font-size: 75PX;
+        color: #ff3333;
+        text-shadow: 2px 2px #000;
+        margin-bottom: 75px;
+    }
+
+    h2 {
+        font-size: 1em;
+        color: #33ffcc;
+        text-shadow: 1px 1px #000;
+        margin-bottom: 30px;
+    }
+
+    .info {
+        font-size: 0.8em;
+        margin-top: 20px;
+    }
+
+    /* SOLDADOS PIXELADOS */
+    .soldado {
+        position: absolute;
+        width: 20px;
+        height: 30px;
+        background: #33ff33;
+        bottom: 10px;
+        animation: moverSoldado 5s linear infinite;
+    }
+
+    .soldado::before {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: #33ff33;
+        top: -10px;
+        left: 5px;
+    }
+
+    @keyframes moverSoldado {
+        0% { left: -50px; }
+        100% { left: 100%; }
+    }
+
+    /* EXPLOSIONES */
+    .explosion {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: #ff3300;
+        border-radius: 50%;
+        animation: explotar 1s infinite alternate;
+    }
+
+    @keyframes explotar {
+        0% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(2); opacity: 0.5; }
+        100% { transform: scale(3); opacity: 0; }
+    }
+
+</style>
+</head>
+<body>
+    <div class="portada">
+        <h1>Gorillaz</h1>
+        <h2>Historia, miembros y canciones</h2>
+        <div class="info">
+            <p>Autor: Christian Reginaldo Támara Ruiz</p>
+            <p>Curso: Informática II</p>
+            <p>Docente: Luis Horonato Pita Astengo</p>
+            <p>Año: 2025</p>
+            <!-- Sección de botones dentro de .portada -->
+<div class="botones">
+    <a href="resumen/Resumen.html" class="boton-arcade">RESUMEN</a>
+    <a href="historia/Historia.html" class="boton-arcade">HISTORIA </a>
+    <a href="miembros/Miembros.html" class="boton-arcade">MIEMBROS</a>
+    <a href="Álbumes/Álbumes.html" class="boton-arcade">ÁLBUMES</a>
+    <a href="Fuentes/fuentes.html" class="boton-arcade">FUENTES</a>
+</div>
+
+        </div>
+
+</body>
+</html>
